@@ -20,7 +20,11 @@ var content= {
                     </p> `
 };
 
-var htmlTemplate = `<html>
+function createTemplate(data){
+    var heading=data.heading
+    var date=data.date
+    var title=data.title
+    var htmlTemplate = `<html>
     <head>
         <title>
            ${title}
@@ -47,7 +51,7 @@ var htmlTemplate = `<html>
             </div>
         </body>
 </html>
-`
+`}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
