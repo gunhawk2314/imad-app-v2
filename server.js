@@ -20,7 +20,7 @@ var articles= {
                         This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
                     </p> `
     },
-    'article-two':{
+   'article-two':{
     title: 'Article One | Arnav Aggarwal',
     date: 'september 5 2016',
     heading: "article one",
