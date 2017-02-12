@@ -28,11 +28,11 @@ submit.onclick= function () {
     
     var button = document.getElementById('counter');
 button.onclick= function () {
+    var request=new XMLHttpRequest();
     
     request.open('GET', 'http://gunhawk2314.imad.hasura-app.io/submit-name?name=' +name, true );
     request.send(null);
     
-    var request=new XMLHttpRequest();
     
     request.onreadystatechange = function () {
         
