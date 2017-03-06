@@ -118,9 +118,9 @@ app.post('/login', function(req, res){
 
 app.get('/check-login', function(req,res){
   if (req.session && req.session.auth && req.session.auth.userId){
-      alert('you are logged in: ' + req.session.auth.userId.toString());
+      res.send('you are logged in: ' + req.session.auth.userId.toString());
   }  else {
-      alert('you are not logged in');
+      res.send('you are not logged in');
   }
 });
 app.get('/logout', function(req,res){
