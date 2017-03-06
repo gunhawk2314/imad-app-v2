@@ -69,7 +69,7 @@ app.get('/', function (req, res) {
 });
 function hash (input, salt){
     var hashed= crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return ['pbkdf2', '10000', salt, hashed.toString('hex')].join($);
+    return ['pbkdf2', '10000', salt, hashed.toString('hex')].join($1);
 }
 
 app.post('/create-user', function(req, res){
@@ -94,7 +94,7 @@ app.post('/login', function(req, res){
            res.status(500).send(err.toString());
        } else {
            if (result.rows.length===0){
-            res.status(400).send('no user');   
+            res.status(403).send('username/password is invalid');   
            }
        }
    });
