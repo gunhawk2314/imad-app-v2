@@ -89,11 +89,13 @@ app.post('/create-user', function(req, res){
 app.post('/login', function(req, res){
     var username=req.body.username;
     var password= req.body.password;
-   pool.query('SELECT * FROM  "user" username=$1', [username], function(err, result){
+   pool.query('SELECT * FROM  "user" username=$1', [username,], function(err, result){
        if (err){
            res.status(500).send(err.toString());
        } else {
-           res.send('user sucesfully created: ' + username);
+           if (result.rows.length===0){
+            res.status(400).send('no user');   
+           }
        }
    });
 });
