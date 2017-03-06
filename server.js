@@ -21,30 +21,7 @@ app.get('/submit-name', function(req, res) {
    res.send(JSON.stringify(names));
 });
 
-var articles= {
-   'article-one': { 
-    title: 'Article One | Arnav Aggarwal',
-    date: 'september 5 2016',
-    heading: "article one",
-    content: ` <p>
-                        This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                    </p>
-                    <p>
-                        This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                    </p>
-                    <p>
-                        This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                    </p> `
-    },
-   'article-two':{
-    title: 'Article Two | Arnav Aggarwal',
-    date: 'september 5 2016',
-    heading: "article Two",
-    content: ` <p>
-                        This is the content for my second article.
-                    </p>`
-            }
-    };
+
 
 function createTemplate (data) {
     var title = data.title;
