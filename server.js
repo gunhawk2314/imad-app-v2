@@ -123,6 +123,11 @@ app.get('/check-login', function(req,res){
       alert('you arenot logged in')
   }
 });
+app.get('/logout', function(req,res){
+  delete.req.session.auth;
+  res.send('you are logged out')
+});
+
 
 
 app.get('/hash/:input', function (req, res) {
