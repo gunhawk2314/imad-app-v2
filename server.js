@@ -107,9 +107,11 @@ app.get('/counter', function(req, res){
 });
 
 
-app.get('/:articleName', function(req, res) {
+app.get('/articles/:articleName', function(req, res) {
    var articleName= req.params.articleName;
-   res.send(createTemplate(articles[articleName]));
+   pool.query("'SELECT * FROM article WHERE title=articleName'");
+   var articleData=
+   res.send(createTemplate(articleData));
 });
 
 app.get('/ui/style.css', function (req, res) {
